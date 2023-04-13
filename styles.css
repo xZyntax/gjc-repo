@@ -1,0 +1,303 @@
+:root{
+    --clr-primary: rgb(52, 211, 108);
+    --clr-primary2: rgb(11, 131, 87);
+    --clr-secondary: rgb(248,241,207) ;
+    --clr-secondary2:rgb(51,51,51);
+    --clr-accent: rgb(221, 172, 11);
+}
+
+*,*::after,*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+    text-decoration: none;
+    
+    
+    
+    
+}
+body{
+    font-size: 62.5%;
+    background-color: var(--clr-secondary2);
+    
+}
+
+/* ==NAV AND HEADER ==*/
+header{
+    top: 0;
+    position: fixed;
+    display: flex;
+    padding: 10px 25px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--clr-primary2);
+    box-shadow: 0 0.05rem 1.5rem rgba(0,0,0,0.4rem);
+    z-index: 1;
+    
+}
+
+
+img{
+    width: 50px;
+    height: 50px;
+    
+}
+header, a{
+    color: var(--clr-secondary);
+}
+
+header .logo-text{
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--clr-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+
+}
+
+header nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header nav a{
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    padding: 1rem 1.5rem;
+    border-radius: 7px;
+    background-color: rgb(9, 107, 71);
+    
+}
+
+
+
+
+nav  > a:hover, nav > a:focus{
+    background-color: var(--clr-accent);
+    transition: 320ms;
+    color: white;
+    outline: none;
+}
+lord-icon{
+    display: none;
+}
+
+
+.btn{
+    display: none;
+}
+
+
+/* ===CONTENT== */
+
+section{
+    margin-top: 120px;
+    text-align: center;
+    
+    
+    
+}
+
+section h2{
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1;
+    color: var(--clr-secondary);
+    display: inline-block;
+    text-align: center;
+    width: auto;
+
+    
+    
+
+
+}
+
+section h2 span{
+    color: var(--clr-accent);
+    font-weight: 700;
+}
+
+
+section h2{
+    -webkit-animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both;animation:tracking-in-expand .7s cubic-bezier(.215,.61,.355,1.000) both
+}
+@-webkit-keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
+
+.container-content{
+    margin-top: 3em ;
+    background-color: var(--clr-primary);
+    border-radius:  4%  4% 0 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+
+    
+   
+}
+
+.box{
+    cursor: default;
+    background-color: var(--clr-secondary);
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 12px;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    min-height: 203px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+
+}
+
+.box-title{
+    color: var(--clr-primary2);
+    font-size: 1.8rem;
+    font-weight: 700;
+    align-self: flex-start;
+    
+}
+.box .supporting-text{
+    display: inline-block;
+    color: var(--clr-secondary2);
+    align-self: flex-start;
+    font-size: 12px;
+}
+
+
+
+/* button color and accent for content */
+.btn-click{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--clr-accent);
+    border-radius: 10px;
+    align-self: center;
+    padding: 10px 50px;
+    margin-top: 15px;
+    
+    
+    
+}
+
+.btn-click a{
+    color :var(--clr-secondary);
+    font: 3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+
+
+
+
+@media (max-width: 990px) {
+    body{
+        font-size: 55%;
+    }
+    header{
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 800px){
+    .btn {
+        display: block;
+        padding: 9px;
+        
+
+    }
+    i{
+        font-size: 40px;
+        color: var(--clr-secondary);
+    }
+    .logo-text{
+        font-size: 1rem;
+    }
+
+    header .logo-text{
+        width: auto;
+    }
+    img{
+        width: 36px;
+        height: 36px;
+    }
+    .nav-bar{
+       
+        position: fixed;
+        flex-direction: column;
+        min-width: 300px;
+        height: 100vh;
+        background-color: var(--clr-primary2);
+        top: 0;
+        right: -100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+        z-index: 1;
+        padding-top: 4rem;
+        transition: 0.6s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+        gap: 5px;
+       
+    }
+    .nav-bar a{
+    
+        width: 100%;
+    }
+
+    lord-icon{
+        display: block;
+        color: var(--clr-accent);
+        
+    }
+    .account-icon{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        background-color: var(--clr-secondary2);
+
+    }
+    .account-icon:hover{
+
+        background-color: var(--clr-primary);
+    }
+
+    
+
+    .btn-close{
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 20px;
+    }
+
+    section h2{
+        font-size: 2rem;
+        letter-spacing: 0px;
+    }
+        
+}
+.nav-toggle{
+    right: 0;
+}
+
+
